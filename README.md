@@ -14,3 +14,34 @@ Static C# Class, uses a single function to take in a generic exception, and a bo
 ```c#
 public static void Handle(Exception Ex, bool PromptUser)
 ```
+## ConsoleMessageTag
+C# Enum consisting of the different tags available. The tag is written when the Console Manager WriteLine is called. The DEBUG tag indicates to the Console Manager WriteLine function that the message should only be shown when the program is in debug mode, unless FORCE_DEBUG_MESSAGES has been set to true;
+```c#
+public enum ConsoleMessageTag
+{
+        INFO,
+        REQUEST,
+        DEBUG,
+        WARNING,
+        ERROR,
+        SUCCESS
+}
+```
+
+## Examples
+Writing a Message to Console:
+```c#
+ConsoleManager.WriteLine("OPERATION HAS COMPLETED SUCCESSFULLY!", ConsoleMessageTag.SUCCESS);
+```
+
+Handling an Exception:
+```c#
+try
+{
+    ...
+}
+catch (Exception Ex)
+{
+    ExceptionHandler.Handle(Ex, false);
+}
+```
