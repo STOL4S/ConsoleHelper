@@ -8,3 +8,7 @@ public static void ForceDebugMessages(bool Force)
 public static void WriteLine(string _Line, ConsoleMessageTag _Tag)
 private static void PostMessage(string _Line, string Tag, ConsoleColor TagColor)
 ```
+
+## Exception Handler
+Static C# Class, uses a single function to take in a generic exception, and a boolean value, as a parameter. It then writes the exception information to the Console using the Console Manager WriteLine function. A log is also written to file, if a Log folder does not exist, then one will be created and the exception data will be saved to text file with the current date/time as the name.
+The user is then prompted on if they would like to continue the execution of the application or exit the application by pressing either Y/N.
